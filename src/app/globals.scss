@@ -1,9 +1,8 @@
-@use 'styles/colors' as *;
+@use "styles/colors" as *;
 :root {
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
 }
 
 * {
@@ -36,19 +35,22 @@ h6 {
 p {
   text-wrap: pretty;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 body {
   margin: 0;
   min-height: 100dvh;
   background-color: $grey-light;
-  
-  header{
+
+  header {
     background-color: $primary-color;
     min-height: 56px;
     display: grid;
     justify-items: center;
 
-    .nav-container{
+    .nav-container {
       display: flex;
       align-items: center;
       height: 100%;
