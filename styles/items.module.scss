@@ -1,12 +1,13 @@
-@use "./colors";
+// @use "./colors";
 
-.itemsList {
-  .items {
+.itemList {
+  ul {
     margin: 1rem 0;
     background-color: white;
     padding: 1rem;
+    list-style: none;
   }
-  .item {
+  article {
     height: 180px;
     border-bottom: 1px solid gray;
     display: flex;
@@ -17,6 +18,9 @@
 
       p {
         margin: 0;
+      }
+      span {
+        margin-left: 1rem;
       }
     }
     img {
