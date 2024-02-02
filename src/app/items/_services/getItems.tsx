@@ -1,4 +1,4 @@
-import { IGetItems } from "../items/interfaces/IGetItems";
+import { IGetItems } from "../_interfaces/IGetItems";
 
 export async function getItems(searchKey: string): Promise<IGetItems> {
   const results = await fetch(
