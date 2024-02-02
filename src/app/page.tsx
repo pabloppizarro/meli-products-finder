@@ -1,3 +1,7 @@
 export default function Home() {
-  return <p>Home page </p>;
+  return (
+    <section id="home">
+      <p>Busca productos para comenzar</p>
+    </section>
+  );
 }

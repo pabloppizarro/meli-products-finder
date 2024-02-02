@@ -1,4 +1,4 @@
-import { getItemDetail } from "@/app/services/getItemDetail";
+import { getItemDetail } from "../_services/getItemDetail";
 
 export default async function Item({ params }: { params: any }) {
   const { author, item } = await getItemDetail(params.id);

@@ -1,0 +1,26 @@
+@use "./colors";
+
+.itemsList {
+  .items {
+    margin: 1rem 0;
+    background-color: white;
+    padding: 1rem;
+  }
+  .item {
+    height: 180px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      p {
+        margin: 0;
+      }
+    }
+    img {
+      object-fit: contain;
+    }
+  }
+}
