@@ -1,16 +1,13 @@
 import { IItem } from "../_interfaces/IItem";
-import Link from "next/link";
 import Image from "next/image";
 
+import styles from "@/styles/components/item-card.module.scss";
 export default function ListItem({ item }: { item: IItem }) {
   return (
-    <article className="item">
-      <Image
-        src={item.picture}
-        width={180}
-        height={180}
-        alt={`Description of ${item.title} product`}
-      />
+    <article className={styles.item}>
+      <div className={styles.image}>
+        <Image src={item.picture} fill={true} alt={`Foto de ${item.title}`} />
+      </div>
       <div className="description">
         <div className="price">
           <h3 className="priceNumber">
@@ -22,9 +19,9 @@ export default function ListItem({ item }: { item: IItem }) {
             <span>{item.free_shipping ? "🚚" : ""}</span>
           </h3>
         </div>
-        <Link href={`items/${item.id}`}>
-          <h3>{item.title}</h3>
-        </Link>
+        <h3>{item.title}</h3>
+        {/* <Link href={`items/${item.id}`}>
+        </Link> */}
       </div>
     </article>
   );

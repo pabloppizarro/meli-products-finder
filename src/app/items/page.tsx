@@ -1,7 +1,8 @@
 import { getItems } from "./_services/getItems";
 
-import styles from "../../../styles/items.module.scss";
+import styles from "@/styles/pages/items-page.module.scss";
 import ListItem from "./_components/ItemCard";
+import Link from "next/link";
 
 export default async function ItemsPage({
   searchParams,
@@ -19,7 +20,9 @@ export default async function ItemsPage({
       <ul className="items">
         {items.map((item) => (
           <li key={item.id}>
-            <ListItem item={item} />
+            <Link href={`items/${item.id}`}>
+              <ListItem item={item} />
+            </Link>
           </li>
         ))}
       </ul>
