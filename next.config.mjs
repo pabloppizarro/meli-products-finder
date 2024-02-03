@@ -12,6 +12,10 @@ const nextConfig = {
         protocol: "http",
         hostname: "http2.mlstatic.com",
       },
+      {
+        protocol: "https",
+        hostname: "http2.mlstatic.com",
+      },
     ],
   },
   sassOptions: {
