@@ -9,8 +9,8 @@ export default function ListItem({ item }: { item: IItem }) {
         <Image src={item.picture} fill={true} alt={`Foto de ${item.title}`} />
       </div>
       <div className="description">
-        <div className="price">
-          <h3 className="priceNumber">
+        <div className={styles.price}>
+          <h3>
             {item.price.amount.toLocaleString("es-ar", {
               style: "currency",
               currency: item.price.currency,
@@ -19,7 +19,7 @@ export default function ListItem({ item }: { item: IItem }) {
             <span>{item.free_shipping ? "🚚" : ""}</span>
           </h3>
         </div>
-        <h3>{item.title}</h3>
+        <h2>{item.title}</h2>
         {/* <Link href={`items/${item.id}`}>
         </Link> */}
       </div>

@@ -13,10 +13,13 @@
     }
   }
   .price {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
+    h2 {
+      margin: 0;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0px;
+    }
     p {
       margin: 0;
     }
