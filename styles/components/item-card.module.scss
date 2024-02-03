@@ -1,0 +1,27 @@
+.item {
+  height: 180px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-around;
+  .image {
+    width: 100px;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    img {
+      object-fit: contain;
+    }
+  }
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    p {
+      margin: 0;
+    }
+    span {
+      margin-left: 1rem;
+    }
+  }
+}
