@@ -3,6 +3,7 @@ import "./globals.scss";
 import SearchBar from "./_components/SearchBar";
 
 import localFont from "next/font/local";
+import { MeliHeader } from "./_components/MeliHeader";
 const proxima = localFont({
   src: "../../public/fonts/Proxima-Nova-Regular.otf",
 });
@@ -19,11 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={proxima.className}>
-        <header>
-          <div className="nav-container">
-            <SearchBar />
-          </div>
-        </header>
+        <MeliHeader>
+          <SearchBar></SearchBar>
+        </MeliHeader>
         <main>{children}</main>
       </body>
     </html>
