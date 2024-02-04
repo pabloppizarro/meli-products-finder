@@ -1,0 +1,16 @@
+@use "../colors" as *;
+@use "../constants" as *;
+.wrapper {
+  background-color: $primary-color;
+  min-height: 56px;
+  display: grid;
+  justify-items: center;
+  box-shadow: $meli-shadow;
+
+  .navContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../constants" as *;
+.wrapper {
+  .searchForm {
+    position: relative;
+    height: 34px;
+    box-shadow: $meli-shadow;
+  }
+
+  .inputSearch {
+    border: 0;
+    height: 100%;
+    border-radius: 4px;
+    padding: 0 1rem;
+  }
+  .searchButton {
+    background: inherit;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    cursor: pointer;
+  }
+}

@@ -1,4 +1,14 @@
 /* Enable hover only on non-touch devices */
+@use "../constants" as *;
+.home {
+  padding: 1rem;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: $meli-shadow;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);
