@@ -1,7 +1,7 @@
 @use "styles/colors" as *;
 :root {
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+  --font-mono: "Proxima Nova", Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "proxima Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }
 
