@@ -27,7 +27,7 @@ export default function SearchBar() {
       <form className={styles.searchForm} action={handleSearch}>
         <label htmlFor="search"></label>
         <input
-          placeholder="Estoy buscando..."
+          placeholder="Nunca dejes de buscar..."
           maxLength={120}
           spellCheck={false}
           className={styles.inputSearch}
