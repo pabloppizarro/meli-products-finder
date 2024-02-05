@@ -12,7 +12,8 @@
 
     @include r.desktop {
       padding: 0 1rem;
-      max-width: 1200px;
+      min-width: co.$desktop-page-min-width;
+      max-width: co.$desktop-page-max-width;
       border-radius: co.$meli-md-radius;
     }
   }
