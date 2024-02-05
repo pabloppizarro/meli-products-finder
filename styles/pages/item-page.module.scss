@@ -67,8 +67,18 @@
 
     @include r.desktop {
       grid-template-columns: repeat(3, 1fr);
-      min-width: co.$desktop-page-min-width;
-      max-width: co.$desktop-page-max-width;
+      width: co.$desktop-page-min-width;
+      // max-width: co.$desktop-page-max-width;
     }
+  }
+
+  .notFound {
+    background-color: white;
+    display: block;
+    text-align: center;
+    max-width: co.$desktop-page-min-width;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: co.$meli-md-radius;
   }
 }
