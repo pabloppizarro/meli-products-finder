@@ -1,0 +1,6 @@
+@mixin desktop {
+  /*Desktop */
+  @media (min-width: 1120px) and (max-width: 1920px) {
+    @content;
+  }
+}
