@@ -1,9 +1,19 @@
-.itemList {
-  ul {
+@use "../responsive" as r;
+@use "../constants" as co;
+.itemPage {
+  display: grid;
+  justify-content: center;
+  .itemsList {
     margin: 0;
     padding: 0;
 
     background-color: white;
     list-style: none;
+
+    @include r.desktop {
+      padding: 0 1rem;
+      max-width: 1200px;
+      border-radius: co.$meli-md-radius;
+    }
   }
 }

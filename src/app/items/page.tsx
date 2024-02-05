@@ -15,9 +15,9 @@ export default async function ItemsPage({
   }
   const { author, categories, items } = await getItems(search);
   return (
-    <section className={styles.itemList} id="items">
+    <section className={styles.itemPage} id="items">
       {/* <div className="breadcrumbs"></div> */}
-      <ul className="items">
+      <ul className={styles.itemsList}>
         {items.map((item) => (
           <li key={item.id}>
             <Link href={`items/${item.id}`}>
