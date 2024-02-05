@@ -1,5 +1,5 @@
 @use "../colors" as c;
-
+@use "../constants" as *;
 .item {
   height: 216px;
   padding: 1rem 0;
@@ -23,11 +23,12 @@
       flex-shrink: 0;
 
       figure {
+        max-height: 100%;
         margin: 0 12px;
-        width: 144px;
-        height: 192px;
+        width: 144px; //from meli
+        height: 192px; //from meli
         min-height: 144px;
-        border-radius: 6px;
+        border-radius: $meli-md-radius;
         display: flex;
         margin: 0;
         overflow: hidden;
@@ -44,7 +45,7 @@
         }
         img {
           object-fit: contain;
-          border-radius: 6px;
+          border-radius: $meli-md-radius;
         }
       }
     }
