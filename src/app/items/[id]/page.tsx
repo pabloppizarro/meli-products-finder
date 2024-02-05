@@ -1,8 +1,47 @@
 import styles from "@/styles/pages/item-page.module.scss";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import { IGetItemDetail } from "../_interfaces/IGetItemDetail";
 import { IItemNotFound } from "../_interfaces/IItemNotFound";
 import { getItemDetail } from "../_services/getItemDetail";
+
+//todo: create custom hook.
+
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const id = params.id;
+
+  const itemFetch = await getItemDetail(id);
+  const { error } = itemFetch as IItemNotFound;
+  if (error) {
+    return {
+      title: "Ups | Mercado Libre",
+      openGraph: {
+        images: [],
+      },
+    };
+  } else {
+    const { author, item } = itemFetch as IGetItemDetail;
+    return {
+      title: `${item.title} | Mercado Libre`,
+      description: item.description,
+      openGraph: {
+        title: `${item.title} | Mercado Libre`,
+        description: item.description,
+        url: `https://www.mercadolibre.com.ar/${item.id}`,
+        images: [...item.pictures],
+      },
+    };
+  }
+}
+
 export default async function Item({ params }: { params: any }) {
   const itemFetch = await getItemDetail(params.id);
   const { error } = itemFetch as IItemNotFound;
@@ -17,6 +56,11 @@ export default async function Item({ params }: { params: any }) {
     );
   } else {
     const { author, item } = itemFetch as IGetItemDetail;
+    console.log("fettch -> ", itemFetch);
+
+    if (item.title) {
+      // await generateMetadata({ item });
+    }
     return (
       <section id="item-page" className={styles.itemPage}>
         <article>

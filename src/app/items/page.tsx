@@ -4,10 +4,12 @@ import styles from "@/styles/pages/items-page.module.scss";
 import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import ListItem from "./_components/ItemCard";
+
 type Props = {
   params: { id: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
+//todo: create custom hook.
 export async function generateMetadata({
   params,
   searchParams,
