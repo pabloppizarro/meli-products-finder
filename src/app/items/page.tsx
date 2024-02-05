@@ -1,14 +1,31 @@
 import { getItems } from "./_services/getItems";
 
 import styles from "@/styles/pages/items-page.module.scss";
+import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import ListItem from "./_components/ItemCard";
-
-export default async function ItemsPage({
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+export async function generateMetadata({
+  params,
   searchParams,
-}: {
-  searchParams: { search: string };
-}) {
+}: Props): Promise<Metadata> {
+  // read route params
+  const id = params.id;
+  const metadata: Metadata = {
+    title: `${searchParams.search} | Mercado Libre Argentina`,
+    openGraph: {
+      title: `${searchParams.search} | Mercado Libre Argentina`,
+      url: `https://www.mercadolibre.com.ar/items?search=${searchParams.search}`,
+    },
+  };
+
+  return metadata;
+}
+
+export default async function ItemsPage({ params, searchParams }: Props) {
   const { search } = searchParams;
   if (!search) {
     return (
@@ -17,7 +34,9 @@ export default async function ItemsPage({
       </section>
     );
   }
-  const { author, categories, items } = await getItems(search);
+  generateMetadata({ params, searchParams });
+
+  const { author, categories, items } = await getItems(search as string);
   if (!items.length) {
     return (
       <section className={styles.itemPage} id="items">
