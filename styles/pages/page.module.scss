@@ -11,8 +11,7 @@
     border-radius: co.$meli-sm-radius;
 
     @include r.desktop {
-      min-width: co.$desktop-page-min-width;
-      max-width: co.$desktop-page-max-width;
+      width: co.$desktop-page-min-width;
     }
   }
 }

@@ -12,9 +12,16 @@
 
     @include r.desktop {
       padding: 0 1rem;
-      min-width: co.$desktop-page-min-width;
-      max-width: co.$desktop-page-max-width;
+      width: co.$desktop-page-min-width;
       border-radius: co.$meli-md-radius;
     }
+  }
+
+  .loading {
+    background-color: white;
+    padding: 1rem;
+    width: co.$desktop-page-min-width;
+    border-radius: co.$meli-md-radius;
+    text-align: center;
   }
 }
