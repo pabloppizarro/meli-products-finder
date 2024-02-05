@@ -1,5 +1,6 @@
 @use "../constants" as *;
 .wrapper {
+  width: 100%;
   .searchForm {
     position: relative;
     height: 34px;
@@ -7,6 +8,7 @@
   }
 
   .inputSearch {
+    width: 100%;
     border: 0;
     height: 100%;
     border-radius: 4px;

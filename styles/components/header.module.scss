@@ -1,6 +1,8 @@
 @use "../colors" as *;
 @use "../constants" as *;
+@use "../responsive" as r;
 .wrapper {
+  width: 100%;
   background-color: $primary-color;
   min-height: 56px;
   display: grid;
@@ -8,9 +10,14 @@
   box-shadow: $meli-shadow;
 
   .navContainer {
+    min-width: 300px;
     display: flex;
     align-items: center;
     height: 100%;
     gap: 0.5rem;
+
+    @include r.desktop {
+      min-width: 600px;
+    }
   }
 }
