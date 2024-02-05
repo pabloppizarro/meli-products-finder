@@ -30,4 +30,8 @@ Crear un archivo `.env.local` o configurar las siguientes variables de entorno:
 SEARCH_API = "http://localhost:3001/api"
 ```
 
+#### Importante: Correr la API BACKEND.
+
+[Se necesita tener corriendo en local esta API. Donde se van a hacer fetch los productos.](https://github.com/pabloppizarro/meli-search-api)
+
 `npm run dev`
