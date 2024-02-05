@@ -29,10 +29,11 @@ export default async function Item({ params }: { params: any }) {
             })}
           </h2>
           {item.free_shipping ? <p>Envio gratis 📦</p> : ""}
+          <div className={styles.actions}>
+            <button>Comprar ahora</button>
+          </div>
         </div>
-        <div className={styles.actions}>
-          <button>Comprar</button>
-        </div>
+
         <div className={styles.details}>
           <h3>Descripción del Producto</h3>
           <pre>{item.description}</pre>
