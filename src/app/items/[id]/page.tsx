@@ -56,7 +56,6 @@ export default async function Item({ params }: { params: any }) {
     );
   } else {
     const { author, item } = itemFetch as IGetItemDetail;
-    console.log("fettch -> ", itemFetch);
 
     if (item.title) {
       // await generateMetadata({ item });
