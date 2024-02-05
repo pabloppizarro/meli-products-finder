@@ -4,6 +4,7 @@ import SearchBar from "./_components/SearchBar";
 
 import localFont from "next/font/local";
 import { MeliHeader } from "./_components/MeliHeader";
+import { Suspense } from "react";
 const proxima = localFont({
   src: "../../public/fonts/Proxima-Nova-Regular.otf",
 });
