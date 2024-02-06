@@ -10,6 +10,13 @@ Debido a que este proyecto se basa en un challenge técnico, se omitieron alguna
 
 ### Approach
 
+#### Stack and techniques:
+
+- Next 14 (React) con App Router.
+- Sass.
+- SEO estático y dinámico.
+- Mobile First.
+
 Para llevar a cabo este challenge front-end y según los requerimientos del doc (Mobile, SEO, SSR, performance, etc). Se ha decidio usar ReactJS con un framework SSR por defecto y orientado al SEO que es Next v14. Tambien para testear algo mas moderno usando el App Router. El maquetado se ha realizado mobile-first usando Sass.
 
 Para algunos detalles se hizo ingenieria inversa al sitio de MercadoLibre y asi poder obtener:
