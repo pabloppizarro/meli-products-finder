@@ -36,7 +36,6 @@ export default async function ItemsPage({ params, searchParams }: Props) {
       </section>
     );
   }
-  generateMetadata({ params, searchParams });
 
   const { author, categories, items } = await getItems(search as string);
   if (!items.length) {
