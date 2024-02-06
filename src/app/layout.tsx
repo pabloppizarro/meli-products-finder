@@ -31,10 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={proxima.className}>
-        <MeliHeader>
-          <SearchBar></SearchBar>
-        </MeliHeader>
-        <main>{children}</main>
+        <Suspense fallback={<p>Cargando...</p>}>
+          <MeliHeader>
+            <SearchBar></SearchBar>
+          </MeliHeader>
+          <main>{children}</main>
+        </Suspense>
       </body>
     </html>
   );
